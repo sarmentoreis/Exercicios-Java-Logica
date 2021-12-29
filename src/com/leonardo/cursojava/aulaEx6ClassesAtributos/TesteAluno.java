@@ -6,28 +6,16 @@ public class TesteAluno {
 
 	public static void main(String[] args) {
 		
-		Aluno a1 = new Aluno();
-		Aluno a2 = new Aluno();
+		Aluno a1 = new Aluno("Leonardo", "12546", "Desenvolvimento de sistemas",
+				   new String[] {"Logica de programacao","Banco de dados","Estrutura de dados"},
+				   new double[] {7.5, 9.0, 5.0});
 		
-		a1.nome = "Leonardo";
-		a1.matricula = "12546";
-		a1.curso = "Desenvolvimento de sistemas";
-		a1.disciplinas[0] = "Logica de programacao";
-		a1.notas[0] = 7.5;
-		a1.disciplinas[1] = "Banco de dados";
-		a1.notas[1] = 9.0;
-		a1.disciplinas[2] = "Estrutura de dados";
-		a1.notas[2] = 5.0;
 		
-		a2.nome = "Dante";
-		a2.matricula = "77456";
-		a2.curso = "Desenvolvimento de sistemas";
-		a2.disciplinas[0] = "Logica de programacao";
-		a2.notas[0] = 10.0;
-		a2.disciplinas[1] = "Banco de dados";
-		a2.notas[1] = 7.0;
-		a2.disciplinas[2] = "Estrutura de dados";
-		a2.notas[2] = 9.0;
+		Aluno a2 = new Aluno("Dante" , "77456", "Desenvolvimento de sistemas", 
+				   new String[] {"Logica de programacao","Banco de dados","Estrutura de dados"},
+				   new double[] {10.0, 7.0, 9.0});
+		
+		
 		
 		String usuario = "";
 		
@@ -39,10 +27,10 @@ public class TesteAluno {
 			String matricula = scan.nextLine();
 			
 			if(matricula.equals("12546")) {
-				System.out.println("Bem vindo " + a1.nome);
+				System.out.println("Bem vindo " + a1.getNome());
 				usuario = "a1";
 			}else if (matricula.equals("77456")) {
-				System.out.println("Bem vindo " + a2.nome);
+				System.out.println("Bem vindo " + a2.getNome());
 				usuario = "a2";
 			}else {
 				System.out.println("Aluno nao cadastrado.");
@@ -62,8 +50,8 @@ public class TesteAluno {
 		}else {
 			if(usuario.equals("a1")) {
 				resultado = a1.isAprovado(opcao);
-				System.out.println("Disciplina selecionada: " + a1.disciplinas[opcao]);
-				System.out.println("Nota: " + a1.notas[opcao]);
+				System.out.println("Disciplina selecionada: " + a1.getDisciplinas(opcao));
+				System.out.println("Nota: " + a1.getNotas(opcao));
 				if(resultado) {
 					System.out.println("Aprovado!");
 				}else {
@@ -71,8 +59,8 @@ public class TesteAluno {
 				}
 			}else {
 				resultado = a2.isAprovado(opcao);
-				System.out.println("Disciplina selecionada: " + a2.disciplinas[opcao]);
-				System.out.println("Nota: " + a2.notas[opcao]);
+				System.out.println("Disciplina selecionada: " + a2.getDisciplinas(opcao));
+				System.out.println("Nota: " + a2.getNotas(opcao));
 				if(resultado) {
 					System.out.println("Aprovado!");
 				}else {

@@ -2,12 +2,27 @@ package com.leonardo.cursojava.aulaEx6ClassesAtributos;
 
 public class Conta {
 	
-	String numero;
-	double saldo = 300;
-	boolean especial;
-	double limite = 1000;
+	private String numero;
+	private double saldo = 300;
+	private boolean especial;
+	private double limite = 1000;
 	
 	
+	
+	public String getNumero() {
+		return numero;
+	}
+
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+
+	public Conta(String numero, boolean especial) {
+		super();
+		this.numero = numero;
+		this.especial = especial;
+	}
+
 	void saque(double valor) {		
 		if(valor > saldo) {
 			if(especial) {

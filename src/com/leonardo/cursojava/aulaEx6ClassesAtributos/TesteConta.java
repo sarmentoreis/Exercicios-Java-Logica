@@ -4,20 +4,12 @@ public class TesteConta {
 
 	public static void main(String[] args) {
 		
-		Conta c1 = new Conta();
-		Conta c2 = new Conta();
-		Conta c3 = new Conta();
+		Conta c1 = new Conta("1234", true);
+		Conta c2 = new Conta("4321", false);
+		Conta c3 = new Conta("0000", true);
 		
 		
-		c1.numero = "1234";
-		c2.numero = "4321";
-		c3.numero = "0000";
-		c1.especial = true;
-		c2.especial = false;
-		c3.especial = true;
-		
-		
-		System.out.println("Conta " + c1.numero +":");
+		System.out.println("Conta " + c1.getNumero() +":");
 		c1.consulta();
 		c1.deposito(300.52);
 		c1.consulta();

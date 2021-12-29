@@ -4,28 +4,21 @@ public class TesteLampada {
 
 	public static void main(String[] args) {
 		
-		Lampada L1 = new Lampada();
+		Lampada L1 = new Lampada("Elgin", "LED", 60.5, 'A', "Fria", "9W");
 		
-		L1.marca = "Elgin";
-		L1.tipo = "LED";
-		L1.temperatura = 60.5;
-		L1.classificacao = 'A';
-		L1.cor = "Fria";
-		L1.potencia = "9W";
-		
-		System.out.println("Marca: "+ L1.marca);
-		System.out.println("Tipo: "+ L1.tipo);
-		System.out.println("Temperatura: "+ L1.temperatura);
-		System.out.println("Classificacao: "+ L1.classificacao);
-		System.out.println("Cor: "+ L1.cor);
-		System.out.println("Potencia: "+ L1.potencia);
+		System.out.println("Marca: "+ L1.getMarca());
+		System.out.println("Tipo: "+ L1.getTipo());
+		System.out.println("Temperatura: "+ L1.getTemperatura());
+		System.out.println("Classificacao: "+ L1.getClassificacao());
+		System.out.println("Cor: "+ L1.getCor());
+		System.out.println("Potencia: "+ L1.getPotencia());
 		
 		System.out.println("\n");
 		
 		L1.ligarLampada();
-		System.out.println("Estado da lampada: " + L1.isLigada);
+		System.out.println("Estado da lampada: " + L1.isLigada());
 		L1.desligarLampada();
-		System.out.println("Estado da lampada: " + L1.isLigada);
+		System.out.println("Estado da lampada: " + L1.isLigada());
 		
 		
 	}
