@@ -74,6 +74,15 @@ public class TesteCurso {
 				System.out.print(notasAl1[i] +", ");
 			}
 		}
+		double notasLeonardo = curso.calculaMedia(1);
+		System.out.println("\nMedia de Leonardo: " + notasLeonardo);
+		if(notasLeonardo >= 7) {
+			System.out.println("Situacao: Aprovado");
+		}else {
+			System.out.println("Situacao: Reprovado");
+		}
+		
+		
 		
 		System.out.print("\nNotas de Luiz: ");
 		for(int i=0; i<notasAl2.length; i++) {
@@ -83,6 +92,15 @@ public class TesteCurso {
 				System.out.print(notasAl2[i] +", ");
 			}
 		}
+		double notasLuiz = curso.calculaMedia(2);
+		System.out.println("\nMedia de Luiz: " + notasLuiz);
+		if(notasLuiz >= 7) {
+			System.out.println("Situacao: Aprovado");
+		}else {
+			System.out.println("Situacao: Reprovado");
+		}
+		
+		
 		
 		System.out.print("\nNotas de Marcus: ");
 		for(int i=0; i<notasAl3.length; i++) {
@@ -93,7 +111,15 @@ public class TesteCurso {
 			}
 			
 		}
-
+		double notasMarcus = curso.calculaMedia(3);
+		System.out.println("\nMedia de Marcus: " + notasMarcus);
+		if(notasMarcus >= 7) {
+			System.out.println("Situacao: Aprovado");
+		}else {
+			System.out.println("Situacao: Reprovado");
+		}
+		
+		System.out.println("\n-|Media da turma: " + curso.calculaMediaTurma()+ "|-");
 		
 		
 		

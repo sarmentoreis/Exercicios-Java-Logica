@@ -64,5 +64,35 @@ public class Curso {
 		
 		
 	}
+	
+	public double calculaMedia(int aluno) {
+		
+		double mediaRetorno = 0;
+		double[] notas = new double[4];
+		
+		notas = getNotas(aluno);
+		
+		for(int i=0; i<notas.length; i++) {
+			mediaRetorno += notas[i];
+		}
+		
+		mediaRetorno = mediaRetorno/4;
+		
+		return mediaRetorno;
+		
+	}
+	
+	public double calculaMediaTurma() {
+		
+		double mediaTurma = 0;
+		
+		double aluno1 = calculaMedia(1);
+		double aluno2 = calculaMedia(2);
+		double aluno3 = calculaMedia(3);
+		
+		mediaTurma = (aluno1 + aluno2 + aluno3) / 3;
+		
+		return mediaTurma;
+	}
 	 	
 }
