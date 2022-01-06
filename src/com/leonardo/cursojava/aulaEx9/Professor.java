@@ -9,7 +9,7 @@ public class Professor {
 	
 	
 	public Professor(String nome, String departamento, String email) {
-		super();
+		
 		this.nome = nome;
 		this.departamento = departamento;
 		this.email = email;

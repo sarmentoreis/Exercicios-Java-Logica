@@ -9,9 +9,8 @@ public class Curso {
 	
 	
 	
-	
 	public Curso(String nome, String horario, Professor professor, Aluno[] alunos) {
-		super();
+		
 		this.nome = nome;
 		this.horario = horario;
 		this.professor = professor;
@@ -31,10 +30,10 @@ public class Curso {
 	public void setHorario(String horario) {
 		this.horario = horario;
 	}
-	public Professor getProfessores() {
+	public Professor getProfessor() {
 		return professor;
 	}
-	public void setProfessores(Professor professor) {
+	public void setProfessor(Professor professor) {
 		this.professor = professor;
 	}
 	public Aluno[] getAlunos() {

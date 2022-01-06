@@ -43,23 +43,36 @@ public class TesteCurso {
 		//Inicializacao do programa com o curso feito.
 		
 		System.out.println("Curso de " + curso.getNome());
-		double nota1 = 0;
-		double nota2 = 0;
-		double nota3 = 0;
-		double nota4 = 0;
+		System.out.println("Professor: " + curso.getProfessor().getNome());
+		System.out.println("Depto: " + curso.getProfessor().getDepartamento());
+		System.out.println("Email: " + curso.getProfessor().getEmail());
+		double nota1 = -1;
+		double nota2 = -1;
+		double nota3 = -1;
+		double nota4 = -1;
 		
 		for(int i=0; i<curso.getAlunos().length; i++) {
 			System.out.println("\nEntre com as notas do aluno " + (i+1)+ " - " + curso.getAlunos()[i].getNome());
-			System.out.print("\nNota 1: ");
-			nota1 = scan.nextDouble();
-			System.out.print("\nNota 2: ");
-			nota2 = scan.nextDouble();
-			System.out.print("\nNota 3: ");
-			nota3 = scan.nextDouble();
-			System.out.print("\nNota 4: ");
-			nota4 = scan.nextDouble();
+			
+			while (nota1 < 0 || nota2 < 0 || nota3 < 0 || nota4 < 0) {
+				System.out.print("\nNota 1: ");
+				nota1 = scan.nextDouble();
+				System.out.print("\nNota 2: ");
+				nota2 = scan.nextDouble();
+				System.out.print("\nNota 3: ");
+				nota3 = scan.nextDouble();
+				System.out.print("\nNota 4: ");
+				nota4 = scan.nextDouble();
+				if(nota1 < 0 || nota2 < 0 || nota3 < 0 || nota4 < 0) {
+					System.out.println("\n--Insira notas positivas.--");
+				}
+			}
 			
 			curso.setNotas(i, nota1,nota2,nota3,nota4);
+			nota1 = -1;
+			nota2 = -1;
+			nota3 = -1;
+			nota4 = -1;
 		}
 		
 		notasAl1 = curso.getNotas(1);
@@ -119,15 +132,7 @@ public class TesteCurso {
 			System.out.println("Situacao: Reprovado");
 		}
 		
-		System.out.println("\n-|Media da turma: " + curso.calculaMediaTurma()+ "|-");
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println("\n-|Media da turma: " + curso.calculaMediaTurma()+ "|-");	
 		
 	}
 
